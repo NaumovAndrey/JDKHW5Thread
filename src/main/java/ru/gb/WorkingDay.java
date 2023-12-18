@@ -4,7 +4,7 @@ public class WorkingDay {
     static final Object lock = new Object();
     public void dinner() {
         synchronized (lock) {
-            System.out.println("Философ начинает обедать (0.5 секунды)");
+            System.out.println(Thread.currentThread() + " начинает обедать (0.5 секунды)");
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
